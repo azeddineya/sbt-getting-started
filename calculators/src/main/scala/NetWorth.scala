@@ -1,9 +1,9 @@
 
 
-object NetWorth  extends  App{
+object NetWorth {
   def calculate(assets: Long, liabilities:Long):Long = assets - liabilities
 
-  override def main(args: Array[String]): Unit = {
+   def main(args: Array[String]): Unit = {
     try{
       val assets= args(0).toLong
       val liabilities = args(1).toLong

@@ -6,7 +6,7 @@
  * P = m (math.pow(1 + r / n, nt) -1)(n / r), where
  *
  */
-object CompoundInterest extends App{
+object CompoundInterest {
   /**
    *
    * @param m : the fixed amount you deposit
@@ -17,7 +17,7 @@ object CompoundInterest extends App{
    */
   def calculate(m: Double, r: Double, t: Int, n: Int = 1): Double = m * (math.pow(1 + r / n, n * t) - 1) * (n / r)
 
-  override def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit = {
     if (args.length < 3) {
       throw new IllegalArgumentException(s"CompoundInterest <principal> <rate> <years>")
     }

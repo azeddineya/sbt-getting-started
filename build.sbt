@@ -3,11 +3,14 @@ import sbt.Keys.libraryDependencies
 
 name := "sbt-getting-started"
 
-version := "0.1"
+ThisBuild / version := "1.0"
 
 scalaVersion := "2.13.2"
 //lazy val root = project.in(file("."))
 //  .aggregate(calculators)
+ThisBuild / licenses ++= Seq(("MIT", url("http://opensource.org/licenses/MIT")))
+
+publish/skip := true
 
 lazy val calculators = project
   .enablePlugins(JavaAppPackaging)
